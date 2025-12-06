@@ -15,6 +15,7 @@ void game_init() {
 }
 
 void game_loop_step() {
+    
     // TODO:
     // 1. Leer entrada con input_update()
     // 2. Actualizar pelota, paddle y colisiones

@@ -20,6 +20,7 @@ int main() {
     // Guarda la puntuación del jugador al final del juego
     // se implementa score_save()
     score_save("scores.txt");
+      printf("Juego terminado.\n");
 
     return 0;
 }

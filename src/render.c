@@ -5,6 +5,7 @@
 #include <stdio.h>
 
 void render_frame() {
+    printf("pues hizo algo");
     // TODO:
     // 1. limpiar pantalla
     // 2. dibujar ladrillos
