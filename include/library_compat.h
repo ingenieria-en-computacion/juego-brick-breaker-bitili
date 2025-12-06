@@ -4,6 +4,7 @@
 #ifdef _WIN32
     #include <conio.h>
     #include <windows.h>
+
 #else
     #include <termios.h>
     #include <unistd.h>
@@ -34,7 +35,7 @@ static int kbhit() {
     return 0;
 }
 
-static int getch_compat() {
+static int getch() {
     struct termios oldt, newt;
     int ch;
     tcgetattr(STDIN_FILENO, &oldt);

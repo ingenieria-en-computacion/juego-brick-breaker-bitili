@@ -1,8 +1,36 @@
 #include <stdio.h>
 #include "game.h"
 #include "score.h"
+#include "menu.h"
 
 int main() {
+
+  menu_show();
+    int opcion = menu_get_option();
+
+     switch (opcion) {
+
+        case 1:
+            game_init();
+            game_loop_step();
+            break;
+
+        case 2:
+            printf("\n=== INSTRUCCIONES ===\n");
+            printf("Usa 'A' para mover a la izquierda\n");
+            printf("Usa 'D' para mover a la derecha\n");
+            printf("Evita que la pelota caiga\n");
+            printf("Destruye todos los ladrillos!\n\n");
+            break;
+
+        case 3:
+            printf("Saliendo del juego...\n");
+            return 0;
+
+        default:
+            printf("Opción no válida\n");
+            break;
+    }
     // Inicializa el sistema de puntajes y crea el archivo si no existe.
     // TODO: Se debe completar esta función en score.c
     score_init("scores.txt");
